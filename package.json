@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/EVeskje/css-frameworks-ca/issues"
   },
-  "homepage": "https://github.com/EVeskje/css-frameworks-ca#readme"
+  "homepage": "https://github.com/EVeskje/css-frameworks-ca#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
 }
