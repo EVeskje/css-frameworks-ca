@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #F58549;
+}
+
+.card {
+  border: 2px solid #1B325F;
+}
+.card .card-title {
+  color: #1B325F;
+}
+.card .btn-primary {
+  background-color: #F58549;
+  border-color: #F58549;
+}
+.card a {
+  color: #1B325F;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: auto;
+}
+.auth-form h2 {
+  color: #1B325F;
+}
+
+.text-center a {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=doggram-theme.css.map */
