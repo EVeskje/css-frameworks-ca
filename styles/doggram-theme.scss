@@ -1,0 +1,38 @@
+// doggram-theme.scss
+
+$primary-color: #F58549;
+$secondary-color: #1B325F;
+
+.navbar {
+  background-color: $primary-color;
+}
+
+.card {
+  border: 2px solid $secondary-color;
+
+  .card-title {
+    color: $secondary-color;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  a {
+    color: $secondary-color;
+  }
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: auto;
+
+  h2 {
+    color: $secondary-color;
+  }
+}
+
+.text-center a {
+  text-decoration: underline;
+}

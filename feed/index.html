@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta
+   name="viewport"
+   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>DogGram - Feed</title>
+  <link
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+   rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/feed.css" />
+  <link rel="stylesheet" href="../styles/_navbar.css" />
+  <link rel="stylesheet" href="../styles/doggram-theme.css" />
+  <!-- Include the DogGram theme style -->
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+   <a class="navbar-brand" href="#">DogGram</a>
+  </nav>
+
+  <div class="container mt-4">
+   <div class="row">
+    <div class="col-md-8">
+     <!-- Post Thumbnails -->
+     <div class="card mb-3">
+      <img
+       src="/images/dog-feed.jpg"
+       class="card-img-top"
+       alt="Post Thumbnail" />
+      <div class="card-body">
+       <h5 class="card-title">Post Title</h5>
+       <p class="card-text">Post content goes here...</p>
+      </div>
+     </div>
+
+     <div class="card mb-3">
+      <img
+       src="/images/dog-feed2.jpg"
+       class="card-img-top"
+       alt="Post Thumbnail" />
+      <div class="card-body">
+       <h5 class="card-title">Post Title</h5>
+       <p class="card-text">Post content goes here...</p>
+      </div>
+     </div>
+
+     <div class="card mb-3">
+      <img
+       src="/images/dog-feed4.jpg"
+       class="card-img-top"
+       alt="Post Thumbnail" />
+      <div class="card-body">
+       <h5 class="card-title">Post Title</h5>
+       <p class="card-text">Post content goes here...</p>
+      </div>
+     </div>
+
+     <!-- Repeat the above card for more posts -->
+    </div>
+
+    <div class="col-md-4">
+     <!-- Search Bar -->
+     <form class="form-inline mb-3">
+      <input
+       class="form-control mr-sm-2"
+       type="search"
+       placeholder="Search"
+       aria-label="Search" />
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+       Search
+      </button>
+     </form>
+
+     <!-- Sort Options (Dropdown Example) -->
+     <div class="dropdown mb-3">
+      <button
+       class="btn btn-secondary dropdown-toggle"
+       type="button"
+       id="sortDropdown"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+       Sort By
+      </button>
+      <div class="dropdown-menu" aria-labelledby="sortDropdown">
+       <a class="dropdown-item" href="#">Latest</a>
+       <a class="dropdown-item" href="#">Popular</a>
+       <a class="dropdown-item" href="#">Trending</a>
+      </div>
+     </div>
+
+     <!-- New Post Form -->
+     <form>
+      <h5>Create a New Post</h5>
+      <div class="form-group">
+       <label for="postTitle">Title</label>
+       <input
+        type="text"
+        class="form-control"
+        id="postTitle"
+        placeholder="Enter post title" />
+      </div>
+      <div class="form-group">
+       <label for="postContent">Content</label>
+       <textarea
+        class="form-control"
+        id="postContent"
+        rows="3"
+        placeholder="Enter post content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Post</button>
+     </form>
+    </div>
+   </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </body>
+</html>
