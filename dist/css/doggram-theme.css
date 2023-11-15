@@ -3,7 +3,7 @@
 }
 
 .card {
-  border: 2px solid #1B325F;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 .card .card-title {
   color: #1B325F;
