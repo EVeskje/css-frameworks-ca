@@ -1,4 +1,4 @@
-// navbar.scss
+// _navbar.scss
 
 .navbar {
   background-color: #ffffff;
@@ -6,23 +6,21 @@
 
   .navbar-brand {
     font-size: 1.5rem;
-    margin-right: 20px;
-    color: #F58549;;
-  }
-
-  .navbar-toggler-icon {
-    border: none; // Remove default border
   }
 
   .navbar-toggler {
-    border: none; // Remove default border
+    display: none; // Hide the toggler by default
   }
 
   .navbar-nav {
-    @media (max-width: 767px) {
+    text-align: center;
+
+    @media (max-width: 766px) { // Adjusted the max-width to 766px
       width: 100%;
-      text-align: center;
-      margin-top: 10px;
+
+      .navbar-toggler {
+        display: block; // Show the toggler below 767px
+      }
 
       .nav-item {
         margin-bottom: 10px;
