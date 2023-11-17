@@ -16,6 +16,17 @@
  align-items: baseline;
 }
 
+.btn-outline-primary {
+  border-color: #f58549;
+  color: #f58549;
+}
+
+.btn-outline-primary:hover {
+  background-color: #f58549;
+  color: #ffffff;
+  border-color: #f58549;
+}
+
 /* New Post Form - Mobile Button */
 @media (max-width: 767.98px) {
  .create-post-mobile-btn {
