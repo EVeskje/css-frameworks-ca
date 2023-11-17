@@ -1,5 +1,27 @@
 .container {
-  margin-top: 50px;
+ margin-top: 50px;
+}
+
+.card {
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ max-width: 550px;
+ margin: 0 auto;
+}
+
+.form-control {
+ margin-bottom: 10px;
+}
+
+.form-inline {
+ align-items: baseline;
+}
+
+/* New Post Form - Mobile Button */
+@media (max-width: 767.98px) {
+ .create-post-mobile-btn {
+  background-color: #f58549;
+  color: white;
+ }
 }
 
 /*# sourceMappingURL=feed.css.map */
