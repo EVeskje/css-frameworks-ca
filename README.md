@@ -1,6 +1,6 @@
 ## css-frameworks-ca
 
-GodGram - Instagram for dogs
+DogGram - Instagram for dogs
 
 ![image](/images/Github-DogGram.png)
 
