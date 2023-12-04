@@ -22,6 +22,11 @@
   margin-right: 5px;
 }
 
+button.btn.create-post-mobile-btn {
+  background-color: #F58549;
+  color: white;
+}
+
 /* Auth */
 .auth-form {
   max-width: 400px;
