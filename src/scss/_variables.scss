@@ -1,4 +1,4 @@
-// custom colors
+// Custom colors
 $primary:       #F58549;
 $secondary:     #1B325F;
 $success:       #12d112;
@@ -9,11 +9,13 @@ $light:         #f6ffff;
 $dark:          #99a3b1;
 
 
-  //Pre-fixes:
+
 //   .card {
 //     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 //     max-width: 550px;
 //   }
+
+// Pre-fixes:
 
 .navbar-brand, .nav-link {
     color: $primary;
