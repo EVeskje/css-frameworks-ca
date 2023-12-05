@@ -17,6 +17,9 @@ $dark:          #99a3b1;
 
 // Pre-fixes:
 
+//Font family
+$font-family-sans-serif: "Helvetica Neue", sans-serif;
+
 .navbar-brand, .nav-link {
     color: $primary;
   }
@@ -33,9 +36,6 @@ $dark:          #99a3b1;
   }
 
   /* Navbar */
-  .navbar {
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-   }
    .navbar a.navbar-brand {
     color: var($primary);
    }
