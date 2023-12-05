@@ -1,0 +1,54 @@
+// custom colors
+$primary:       #F58549;
+$secondary:     #1B325F;
+$success:       #12d112;
+$info:          #23eded;
+$warning:       #e27305;
+$danger:        #5b0000;
+$light:         #f6ffff;
+$dark:          #99a3b1;
+
+/* In your custom styles */  
+  .navbar-brand, .nav-link {
+    color: $primary;
+  }
+
+  //Pre-fixes:
+  .card {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
+  }
+  .card .card-title {
+    color: var($secondary);
+  }
+  .card .btn-primary {
+    background-color: var($primary);
+    border-color: var($primary);
+  }
+  .card a {
+    color: var($primary);
+  }
+  
+  button.btn.create-post-mobile-btn {
+    background-color: var($primary);
+    color: white;
+  }
+  
+  /* Navbar */
+  .navbar {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+   }
+   .navbar a.navbar-brand {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    color: var($primary);
+   }
+  
+   .navbar .navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+   }
+
+   .navbar .navbar-nav .nav-item .nav-link:hover,
+   .navbar .navbar-nav .nav-item .nav-link.active {
+    color: var($primary);
+   }

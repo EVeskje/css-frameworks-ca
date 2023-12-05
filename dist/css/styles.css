@@ -1,53 +1,4 @@
 @charset "UTF-8";
-.card {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  max-width: 550px;
-}
-
-.card .card-title {
-  color: #1B325F;
-}
-
-.card .btn-primary {
-  background-color: #F58549;
-  border-color: #F58549;
-}
-
-.card a {
-  color: #F58549;
-}
-
-.dog-paw-icon {
-  font-size: 24px;
-  margin-right: 5px;
-}
-
-button.btn.create-post-mobile-btn {
-  background-color: #F58549;
-  color: white;
-}
-
-/* Navbar */
-.navbar {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a.navbar-brand {
-  font-size: 1.5rem;
-  margin-left: 15px;
-  color: #f58549;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-  color: #333;
-  font-weight: bold;
-}
-
-.navbar .navbar-nav .nav-item .nav-link:hover,
-.navbar .navbar-nav .nav-item .nav-link.active {
-  color: #f58549;
-}
-
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11903,6 +11854,53 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+/* In your custom styles */
+.navbar-brand, .nav-link {
+  color: #F58549;
+}
+
+.card {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  max-width: 550px;
+}
+
+.card .card-title {
+  color: var(#1B325F);
+}
+
+.card .btn-primary {
+  background-color: var(#F58549);
+  border-color: var(#F58549);
+}
+
+.card a {
+  color: var(#F58549);
+}
+
+button.btn.create-post-mobile-btn {
+  background-color: var(#F58549);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a.navbar-brand {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  color: var(#F58549);
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: var(#F58549);
 }
 
 /*# sourceMappingURL=styles.css.map */
