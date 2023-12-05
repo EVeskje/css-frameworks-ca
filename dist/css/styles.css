@@ -11855,14 +11855,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* In your custom styles */
 .navbar-brand, .nav-link {
   color: #F58549;
-}
-
-.card {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  max-width: 550px;
 }
 
 .card .card-title {
@@ -11878,11 +11872,6 @@ textarea.form-control-lg {
   color: var(#F58549);
 }
 
-button.btn.create-post-mobile-btn {
-  background-color: var(#F58549);
-  color: white;
-}
-
 /* Navbar */
 .navbar {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
@@ -11892,10 +11881,6 @@ button.btn.create-post-mobile-btn {
   font-size: 1.5rem;
   margin-left: 15px;
   color: var(#F58549);
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-  font-weight: bold;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover,
