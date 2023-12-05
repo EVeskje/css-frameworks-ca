@@ -18,7 +18,7 @@ $dark:          #99a3b1;
 .navbar-brand, .nav-link {
     color: $primary;
   }
-  
+
   .card .card-title {
     color: var($secondary);
   }
@@ -35,8 +35,6 @@ $dark:          #99a3b1;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
    }
    .navbar a.navbar-brand {
-    font-size: 1.5rem;
-    margin-left: 15px;
     color: var($primary);
    }
 
