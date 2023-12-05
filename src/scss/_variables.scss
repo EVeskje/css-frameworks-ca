@@ -17,13 +17,10 @@ $dark:          #99a3b1;
 
 // Pre-fixes:
 
-//Font family
+// Font family
 $font-family-sans-serif: "Helvetica Neue", sans-serif;
 
-.navbar-brand, .nav-link {
-    color: $primary;
-  }
-
+// Card
   .card .card-title {
     color: var($secondary);
   }
@@ -35,7 +32,7 @@ $font-family-sans-serif: "Helvetica Neue", sans-serif;
     color: var($primary);
   }
 
-  /* Navbar */
+  // Navbar
    .navbar a.navbar-brand {
     color: var($primary);
    }
@@ -44,3 +41,7 @@ $font-family-sans-serif: "Helvetica Neue", sans-serif;
    .navbar .navbar-nav .nav-item .nav-link.active {
     color: var($primary);
    }
+
+   .navbar-brand, .nav-link {
+    color: $primary;
+  }

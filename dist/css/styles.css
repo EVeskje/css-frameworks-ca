@@ -11855,10 +11855,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.navbar-brand, .nav-link {
-  color: #F58549;
-}
-
 .card .card-title {
   color: var(#1B325F);
 }
@@ -11872,7 +11868,6 @@ textarea.form-control-lg {
   color: var(#F58549);
 }
 
-/* Navbar */
 .navbar a.navbar-brand {
   color: var(#F58549);
 }
@@ -11880,6 +11875,10 @@ textarea.form-control-lg {
 .navbar .navbar-nav .nav-item .nav-link:hover,
 .navbar .navbar-nav .nav-item .nav-link.active {
   color: var(#F58549);
+}
+
+.navbar-brand, .nav-link {
+  color: #F58549;
 }
 
 /*# sourceMappingURL=styles.css.map */
