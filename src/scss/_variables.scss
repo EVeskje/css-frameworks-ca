@@ -1,47 +1,4 @@
-// Custom colors
-$primary:       #F58549;
-$secondary:     #1B325F;
-$success:       #12d112;
-$info:          #23eded;
-$warning:       #e27305;
-$danger:        #5b0000;
-$light:         #f6ffff;
-$dark:          #99a3b1;
-
-
-
-//   .card {
-//     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-//     max-width: 550px;
-//   }
-
-// Pre-fixes:
+$enable-shadows: true;
 
 // Font family
 $font-family-sans-serif: "Helvetica Neue", sans-serif;
-
-// Card
-  .card .card-title {
-    color: var($secondary);
-  }
-  .card .btn-primary {
-    background-color: var($primary);
-    border-color: var($primary);
-  }
-  .card a {
-    color: var($primary);
-  }
-
-  // Navbar
-   .navbar a.navbar-brand {
-    color: var($primary);
-   }
-
-   .navbar .navbar-nav .nav-item .nav-link:hover,
-   .navbar .navbar-nav .nav-item .nav-link.active {
-    color: var($primary);
-   }
-
-   .navbar-brand, .nav-link {
-    color: $primary;
-  }

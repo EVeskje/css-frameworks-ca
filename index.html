@@ -1,102 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="UTF-8" />
-  <meta
-   name="viewport"
-   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>DogGram - Authentication</title>
-  <!-- Bootstrap CSS -->
-  <link
-   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DogGram | Authentication</title>
+
+  <!-- JavaScript Modules -->
+  <script src="./js/registerNewUser.mjs" type="module"></script>
+  <script src="./js/loginUser.mjs" type="module"></script>
+  <script src="./js/variables.mjs" type="module"></script>
+
   <!-- Styles -->
-  <link rel="stylesheet" href="/dist/css/styles.css" />
-
-  <!-- Hotjar Tracking Code for DogGram -->
-  <script src="/js/hotjar.js"></script>
+  <link rel="stylesheet" href="dist/css/styles.css" />
  </head>
-
  <body>
-  <nav class="navbar navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">DogGram</a>
-    <button
-     class="navbar-toggler"
-     type="button"
-     data-toggle="collapse"
-     data-target="#navbarNav"
-     aria-controls="navbarNav"
-     aria-expanded="false"
-     aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+  <header>
+   <nav class="navbar navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+     <a class="navbar-brand" href="index.html">DogGram</a>
+     <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav fw-bold">
-        <li class="nav-item">
-          <a class="nav-link ms-3 active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ms-3" href="/profile">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ms-3" href="/feed">Feed</a>
-        </li>
+       <li class="nav-item">
+        <a class="nav-link ms-3 active" aria-current="page" href="/index.html"
+         >Home</a
+        >
+       </li>
+       <li class="nav-item">
+        <a class="nav-link ms-3" href="/profile">Profile</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link ms-3" href="/feed">Feed</a>
+       </li>
       </ul>
+     </div>
     </div>
-   </div>
-  </nav>
+   </nav>
+  </header>
 
-  <div class="container mt-4">
-   <div class="row">
-    <div class="col-md-6 offset-md-3">
-     <div class="card">
-      <div class="card-body">
-       <h2 class="text-center mb-4">Welcome to DogGram</h2>
+  <main>
+   <div class="container mt-4">
+    <div class="row">
+     <div class="col-md-6 offset-md-3">
+      <div class="card">
+       <div class="card-body">
+        <h2 class="text-center mb-4">Welcome to DogGram</h2>
 
-       <form action="/profile" method="post" class="auth-form">
-        <div class="form-group">
-         <label for="username">Username</label>
-         <input
-          type="text"
-          class="form-control"
-          id="username"
-          name="username"
-          required />
+        <!-- Login Form -->
+        <div>
+         <form id="loginForm" method="get">
+          <div class="mb-3">
+           <label for="inputEmailLogin" class="form-label">Email</label>
+           <input
+            type="email"
+            class="form-control"
+            id="inputEmailLogin"
+            required
+            pattern="[\w\-.]+@(stud.)?noroff.no$"
+            title="Only @(stud.)noroff.no domains are allowed to log in" />
+          </div>
+          <div class="mb-3">
+           <label for="inputPasswordLogin" class="form-label">Password</label>
+           <input
+            type="password"
+            class="form-control"
+            id="inputPasswordLogin"
+            minlength="8"
+            required
+            title="Password must be at least 8 characters long" />
+          </div>
+          <div>
+           <button type="submit" class="btn btn-primary">Log in</button>
+          </div>
+         </form>
+
+         <!-- Sign-up Form -->
+         <h4 class="text-center mt-3">Don't have an account?</h4>
+         <h4 class="text-center mb-4">Sign up for DogGram!</h4>
+         <form id="registerForm" method="get">
+          <div class="mb-3">
+           <label for="inputNewEmail" class="form-label">Username</label>
+           <input
+            type="text"
+            class="form-control"
+            id="inputNewEmail"
+            name="inputNewEmail"
+            minlength="3"
+            required />
+          </div>
+          <div class="mb-3">
+           <label for="inputNewEmail" class="form-label">Email</label>
+           <input
+            type="email"
+            class="form-control"
+            id="inputNewEmail"
+            required
+            pattern="[\w\-.]+@(stud.)?noroff.no$"
+            title="Only @(stud.)noroff.no domains are allowed to register" />
+          </div>
+          <div class="mb-3">
+           <label for="inputNewPassword" class="form-label">Password</label>
+           <input
+            type="password"
+            class="form-control"
+            id="inputNewPassword"
+            minlength="8"
+            title="Password must be at least 8 characters long"
+            required />
+          </div>
+          <div class="mb-3">
+           <button type="submit" class="btn btn-primary">Sign up!</button>
+          </div>
+         </form>
         </div>
-        <div class="form-group">
-         <label for="password">Password</label>
-         <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
-          minlength="8"
-          required />
-        </div>
-
-        <button type="button" id="loginButton" class="btn btn-primary">
-         Log In
-        </button>
-       </form>
-
-       <div class="text-center mt-3">
-        <p>
-         Don't have an account?
-         <a href="/feed/index.html">Sign up for DogGram</a>
-        </p>
        </div>
       </div>
      </div>
     </div>
    </div>
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer mt-5 py-3">
    <div class="container text-center">
     <p class="mb-0">
-     &copy; 2023 DogGram. All rights reserved<i class="dog-paw-icon"
+     &copy; 2024 DogGram | All rights reserved<i class="dog-paw-icon"
       >&#x1F43E;</i
      >
     </p>
@@ -104,9 +142,6 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="/js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
  </body>
 </html>

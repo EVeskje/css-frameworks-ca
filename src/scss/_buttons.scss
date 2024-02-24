@@ -1,0 +1,24 @@
+// Primary button
+$primary: #F58549;
+
+//secondary button
+$secondary: #fce0d0;
+
+// The only way to get this styling to work on this button was to add  "!important"
+// I would love to know a better way to do it if there is...?
+.search-button {
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.back-button {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  margin: 70px auto 0px 10px;
+  padding: 10px 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #1A1D2E;
+  color: #fff;
+  border: none;
+}

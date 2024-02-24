@@ -1,10 +1,9 @@
 {
   "name": "css-frameworks-ca",
   "version": "0.0.1",
-  "description": "An example bootstrap app",
-  "main": "index.js",
+  "description": "A starting point for the CSS Frameworks CA project",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"We will learn more about testing in the Workflow course\" && exit 1",
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css"
   },
@@ -13,9 +12,11 @@
     "url": "git+https://github.com/EVeskje/css-frameworks-ca.git"
   },
   "keywords": [
+    "CSS",
+    "Frameworks",
     "Bootstrap",
-    "SASS",
-    "SCSS"
+    "SCSS",
+    "SASS"
   ],
   "author": "Eirik Nordstrand Veskje <Eirik.nv@hotmail.com>",
   "license": "ISC",
