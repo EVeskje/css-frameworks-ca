@@ -1,4 +1,4 @@
-import { apiBaseUrl, loginUrl } from "../variables.mjs";
+import { apiBaseUrl, loginUrl } from "../api_constants.mjs";
 
 /**
  * Function to login an existing user

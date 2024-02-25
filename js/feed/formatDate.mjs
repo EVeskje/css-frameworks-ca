@@ -18,15 +18,15 @@ export const formatDateString = (timestamp) => {
   "July",
   "August",
   "September",
-  "Oktober",
+  "October",
   "November",
   "December",
  ];
 
- //Create a Date object from the timestamp
+ // Create a Date object from the timestamp
  const date = new Date(timestamp);
 
- // Get the day, month and year components
+ // Extract day, month, and year components
  const day = String(date.getDate()).padStart(2, "0");
  const monthIndex = date.getMonth();
  const month = months[monthIndex];

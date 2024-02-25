@@ -1,6 +1,6 @@
-import { apiBaseUrl, allPostsApi } from "../variables.mjs";
+import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
 import { createMessage } from "../errorMessage.mjs";
-import { formatDateString } from "../formatDate.mjs";
+import { formatDateString } from "./formatDate.mjs";
 import { fetchWithToken } from "../token/accessToken.mjs";
 
 // Extracting the post ID from the URL query string

@@ -1,7 +1,7 @@
-import { apiBaseUrl, allPostsApi } from "../variables.mjs";
+import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
 import { fetchWithToken } from "../token/accessToken.mjs";
 import { createMessage } from "../errorMessage.mjs";
-import { formatDateString } from "../formatDate.mjs";
+import { formatDateString } from "./formatDate.mjs";
 
 /**
  * Fetches all posts with an access token

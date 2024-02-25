@@ -1,4 +1,4 @@
-import { apiBaseUrl, registerUrl } from "../variables.mjs";
+import { apiBaseUrl, registerUrl } from "../api_constants.mjs";
 
 /**
  * Fuction to register a new user

@@ -1,4 +1,4 @@
-import { apiBaseUrl, allPostsApi } from "../variables.mjs";
+import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
 import { fetchWithToken, token } from "../token/accessToken.mjs";
 
 /**

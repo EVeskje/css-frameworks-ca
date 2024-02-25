@@ -1,6 +1,6 @@
 import { fetchWithToken } from "../token/accessToken.mjs";
-import { apiBaseUrl, allPostsApi } from "../variables.mjs";
-import { formatDateString } from "../formatDate.mjs";
+import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
+import { formatDateString } from "./formatDate.mjs";
 
 // Array to store fetched posts
 let posts = [];

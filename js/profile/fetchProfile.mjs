@@ -1,4 +1,4 @@
-import { apiBaseUrl, profileUrl } from "../variables.mjs";
+import { apiBaseUrl, profileUrl } from "../api_constants.mjs";
 import { fetchWithToken } from "../token/accessToken.mjs";
 
 // Retrieve user profile information from localStorage

@@ -1,4 +1,4 @@
-import { formatDateString } from "../formatDate.mjs";
+import { formatDateString } from "./formatDate.mjs";
 
 /**
  * Renders all the posts in the selected container.

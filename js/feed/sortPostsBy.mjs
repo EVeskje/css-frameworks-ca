@@ -1,5 +1,5 @@
 import { fetchWithToken } from "../token/accessToken.mjs";
-import { apiBaseUrl, allPostsApi } from "../variables.mjs";
+import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
 import { createCardElement } from "./createCards.mjs";
 
 // Array to store fetched posts
