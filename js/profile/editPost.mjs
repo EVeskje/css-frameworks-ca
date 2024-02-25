@@ -1,5 +1,5 @@
-import { apiBaseUrl, allPostsApi } from "./variables.mjs";
-import { fetchWithToken, token, getData } from "./accessToken.mjs";
+import { apiBaseUrl, allPostsApi } from "../variables.mjs";
+import { fetchWithToken, token, getData } from "../token/accessToken.mjs";
 
 // Query string parameter
 const queryString = document.location.search;

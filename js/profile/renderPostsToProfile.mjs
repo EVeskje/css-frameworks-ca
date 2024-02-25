@@ -1,7 +1,7 @@
-import { apiBaseUrl, profileUrl } from "./variables.mjs";
-import { fetchWithToken } from "./accessToken.mjs";
-import { createMessage } from "./errorMessage.mjs";
-import { formatDateString } from "./formatDate.mjs";
+import { apiBaseUrl, profileUrl } from "../variables.mjs";
+import { fetchWithToken } from "../token/accessToken.mjs";
+import { createMessage } from "../errorMessage.mjs";
+import { formatDateString } from "../formatDate.mjs";
 
 // Getting userData from localStorage
 const user = JSON.parse(localStorage.getItem("userProfile"));

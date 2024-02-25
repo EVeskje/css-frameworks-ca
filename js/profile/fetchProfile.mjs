@@ -1,5 +1,5 @@
-import { apiBaseUrl, profileUrl } from "./variables.mjs";
-import { fetchWithToken } from "./accessToken.mjs";
+import { apiBaseUrl, profileUrl } from "../variables.mjs";
+import { fetchWithToken } from "../token/accessToken.mjs";
 
 // Retrieve user profile information from localStorage
 const user = JSON.parse(localStorage.getItem("userProfile"));

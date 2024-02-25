@@ -1,4 +1,4 @@
-import { formatDateString } from "./formatDate.mjs";
+import { formatDateString } from "../formatDate.mjs";
 
 /**
  * Renders all the posts in the selected container.
@@ -56,7 +56,7 @@ export const createCardElement = (posts) => {
    // if not, use the fallback image "../images/default_profile.jpg"
    profileImageThumbnail.src = !!postData.author.avatar
     ? postData.author.avatar
-    : "../images/default_profile.jpg";
+    : "/images/default_profile.jpg";
    profileImageThumbnail.className =
     "rounded-circle me-1 profile-img-thumbnail";
    userNameOnCardLayout.appendChild(profileImageThumbnail);
