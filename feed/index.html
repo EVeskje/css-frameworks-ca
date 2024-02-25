@@ -5,29 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="/dist/css/styles.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-
+  <!-- JavaScript -->
   <script src="/js/createNewPost.mjs" type="module"></script>
   <script src="/js/fetchAllPosts.mjs" type="module"></script>
   <script src="/js/searchFunction.mjs" type="module"></script>
   <script src="/js/sortPostsBy.mjs" type="module"></script>
   <script src="/js/variables.mjs" type="module"></script>
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="/dist/css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
   <title>DogGram | Posts Feed</title>
   <link rel="icon" type="image/x-icon" href="" />
  </head>
  <body>
   <header>
-   <nav
-    class="navbar fixed-top navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
+   <nav class="navbar navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
     <div class="container-fluid">
-     <a class="navbar-brand" href="/index.html">DogGram</a>
+     <a class="navbar-brand" href="index.html">DogGram</a>
      <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation">
@@ -36,15 +37,15 @@
      <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav fw-bold">
        <li class="nav-item">
-        <a class="nav-link ms-3 active" aria-current="page" href="/index.html"
-         >Home</a
-        >
+        <a class="nav-link ms-3" href="/index.html">Home</a>
        </li>
        <li class="nav-item">
         <a class="nav-link ms-3" href="/profile">Profile</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link ms-3" href="/feed">Feed</a>
+        <a class="nav-link ms-3 active" aria-current="page" href="/feed"
+         >Feed</a
+        >
        </li>
       </ul>
      </div>
@@ -53,83 +54,130 @@
   </header>
 
   <main>
-   <h1 class="visually-hide mb-5">Feed</h1>
-   <div class="container col-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-    <h2 class="mt-3">CREATE NEW POST</h2>
-    <form id="newPost">
-     <div class="mb-3">
-      <label for="exampleInputTitle1" class="form-label">Title*</label>
-      <input
-       type="text"
-       class="form-control"
-       id="exampleInputTitle1"
-       required />
+   <h1 class="mb-5 hidden">Feed</h1>
+
+   <section>
+    <div class="container">
+     <h2 class="text-center mb-4">Posts</h2>
+
+     <!-- Create New Post Modal Button -->
+     <div class="mb-4">
+      <button
+       type="button"
+       class="btn btn-primary"
+       data-bs-toggle="modal"
+       data-bs-target="#createPostModal">
+       Create New Post
+      </button>
      </div>
-     <div class="mb-3">
-      <label for="exampleInputTextArea1" class="form-label"
-       >Add your content*</label
-      >
-      <textarea
-       class="form-control textarea-height"
-       id="exampleInputTextArea1"
-       required></textarea>
-     </div>
-     <div class="mb-3">
-      <label for="exampleInputImageUrl" class="form-label">Image URL</label>
-      <input type="text" class="form-control" id="exampleInputImageUrl" />
-     </div>
-     <div class="text-center my-3 d-flex justify-content-center gap-4">
-      <!--     <button type="submit" class="btn btn-outline-primary">Add image</button> -->
-      <button type="submit" class="btn btn-primary">Publish</button>
-     </div>
-    </form>
-   </div>
-   <h2 class="text-center">Posts</h2>
-   <div
-    class="container mt-4 d-flex align-items-center justify-content-center flex-row flex-wrap gap-4">
-    <form id="search-form" class="form-inline">
-     <div class="input-group">
-      <input
-       id="search-input"
-       type="text"
-       class="form-control"
-       placeholder="Search"
-       aria-label="Search"
-       aria-describedby="search-button" />
-      <div class="input-group-append">
-       <button
-        class="btn btn-primary search-button"
-        type="submit"
-        id="search-button">
-        <svg
-         xmlns="http://www.w3.org/2000/svg"
-         width="16"
-         height="16"
-         fill="currentColor"
-         class="bi bi-search"
-         viewBox="0 0 16 16">
-         <path
-          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-        </svg>
-       </button>
+
+     <!-- Create New Post Modal -->
+     <div
+      class="modal fade"
+      id="createPostModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Create New Post</h5>
+         <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        </div>
+        <form id="newPost">
+         <div class="modal-body">
+          <div class="mb-3">
+           <label for="exampleInputTitle1" class="form-label">Title*</label>
+           <input
+            type="text"
+            class="form-control"
+            id="exampleInputTitle1"
+            required />
+          </div>
+          <div class="mb-3">
+           <label for="exampleInputTextArea1" class="form-label"
+            >Add your content*</label
+           >
+           <textarea
+            class="form-control textarea-height"
+            id="exampleInputTextArea1"
+            required></textarea>
+          </div>
+          <div class="mb-3">
+           <label for="exampleInputImageUrl" class="form-label"
+            >Image URL</label
+           >
+           <input type="text" class="form-control" id="exampleInputImageUrl" />
+          </div>
+         </div>
+         <div class="modal-footer">
+          <button
+           type="button"
+           class="btn btn-secondary"
+           data-bs-dismiss="modal">
+           Close
+          </button>
+          <button type="submit" class="btn btn-primary">Publish</button>
+         </div>
+        </form>
+       </div>
       </div>
      </div>
-    </form>
-    <div class="btn-group">
-     <button
-      class="btn btn-outline-primary dropdown-toggle"
-      type="button"
-      data-bs-toggle="dropdown"
-      data-bs-auto-close="true"
-      aria-expanded="false">
-      Sort by
-     </button>
-     <ul class="dropdown-menu" id="sort-buttons">
-      <li><a class="dropdown-item" href="#" id="newest">Newest first</a></li>
-      <li><a class="dropdown-item" href="#" id="oldest">Oldest first</a></li>
-     </ul>
+
+     <!-- Search Bar -->
+     <form id="search-form" class="form-inline mb-4">
+      <div class="input-group">
+       <input
+        id="search-input"
+        type="text"
+        class="form-control"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-button" />
+       <div class="input-group-append">
+        <button
+         class="btn btn-primary search-button"
+         type="submit"
+         id="search-button">
+         <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+           d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+         </svg>
+        </button>
+       </div>
+      </div>
+     </form>
+
+     <!-- Sort By Dropdown -->
+     <div class="d-flex align-items-center justify-content-center">
+      <div class="btn-group">
+       <button
+        class="btn btn-outline-primary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-auto-close="true"
+        aria-expanded="false">
+        Sort by
+       </button>
+       <ul class="dropdown-menu" id="sort-buttons">
+        <li><a class="dropdown-item" href="#" id="newest">Newest first</a></li>
+        <li><a class="dropdown-item" href="#" id="oldest">Oldest first</a></li>
+       </ul>
+      </div>
+     </div>
     </div>
-   </div>
+   </section>
+
    <div class="loader-container">
     <div class="content-loader"></div>
     <p>Loading...</p>
