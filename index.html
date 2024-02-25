@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DogGram | Authentication</title>
 
-  <!-- JavaScript Modules -->
+  <!-- JavaScript -->
   <script src="./js/login/registerNewUser.mjs" type="module"></script>
   <script src="./js/login/loginUser.mjs" type="module"></script>
   <script src="./js/api_constants.mjs" type="module"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="dist/css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
  </head>
  <body>
   <header>
@@ -57,72 +58,69 @@
         <h2 class="text-center mb-4">Welcome to DogGram</h2>
 
         <!-- Login Form -->
-        <div>
-         <form id="loginForm" method="get">
-          <div class="mb-3">
-           <label for="inputEmailLogin" class="form-label">Email</label>
-           <input
-            type="email"
-            class="form-control"
-            id="inputEmailLogin"
-            required
-            pattern="[\w\-.]+@(stud.)?noroff.no$"
-            title="Only @(stud.)noroff.no domains are allowed to log in" />
-          </div>
-          <div class="mb-3">
-           <label for="inputPasswordLogin" class="form-label">Password</label>
-           <input
-            type="password"
-            class="form-control"
-            id="inputPasswordLogin"
-            minlength="8"
-            required
-            title="Password must be at least 8 characters long" />
-          </div>
-          <div>
-           <button type="submit" class="btn btn-primary">Log in</button>
-          </div>
-         </form>
+        <form id="loginForm" method="get">
+         <div class="mb-3">
+          <label for="inputEmailLogin" class="form-label">Email</label>
+          <input
+           type="email"
+           class="form-control"
+           id="inputEmailLogin"
+           required
+           pattern="[\w\-.]+@(stud.)?noroff.no$"
+           title="Only @(stud.)noroff.no domains are allowed to log in" />
+         </div>
+         <div class="mb-3">
+          <label for="inputPasswordLogin" class="form-label">Password</label>
+          <input
+           type="password"
+           class="form-control"
+           id="inputPasswordLogin"
+           minlength="8"
+           required
+           title="Password must be at least 8 characters long" />
+         </div>
+         <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Log in</button>
+         </div>
+        </form>
 
-         <!-- Sign-up Form -->
-         <h4 class="text-center mt-3">Don't have an account?</h4>
-         <h4 class="text-center mb-4">Sign up for DogGram!</h4>
-         <form id="registerForm" method="get">
-          <div class="mb-3">
-           <label for="inputNewEmail" class="form-label">Username</label>
-           <input
-            type="text"
-            class="form-control"
-            id="inputNewEmail"
-            name="inputNewEmail"
-            minlength="3"
-            required />
-          </div>
-          <div class="mb-3">
-           <label for="inputNewEmail" class="form-label">Email</label>
-           <input
-            type="email"
-            class="form-control"
-            id="inputNewEmail"
-            required
-            pattern="[\w\-.]+@(stud.)?noroff.no$"
-            title="Only @(stud.)noroff.no domains are allowed to register" />
-          </div>
-          <div class="mb-3">
-           <label for="inputNewPassword" class="form-label">Password</label>
-           <input
-            type="password"
-            class="form-control"
-            id="inputNewPassword"
-            minlength="8"
-            title="Password must be at least 8 characters long"
-            required />
-          </div>
-          <div class="mb-3">
-           <button type="submit" class="btn btn-primary">Sign up!</button>
-          </div>
-         </form>
-        </div>
+        <!-- Sign-up Form -->
+        <h4 class="text-center mt-3">Don't have an account?</h4>
+        <h4 class="text-center mb-4">Sign up for DogGram!</h4>
+        <form id="registerForm" method="get">
+         <div class="mb-3">
+          <label for="inputNewUsername" class="form-label">Username</label>
+          <input
+           type="text"
+           class="form-control"
+           id="inputNewUsername"
+           minlength="3"
+           required />
+         </div>
+         <div class="mb-3">
+          <label for="inputNewEmail" class="form-label">Email</label>
+          <input
+           type="email"
+           class="form-control"
+           id="inputNewEmail"
+           required
+           pattern="[\w\-.]+@(stud.)?noroff.no$"
+           title="Only @(stud.)noroff.no domains are allowed to register" />
+         </div>
+         <div class="mb-3">
+          <label for="inputNewPassword" class="form-label">Password</label>
+          <input
+           type="password"
+           class="form-control"
+           id="inputNewPassword"
+           minlength="8"
+           title="Password must be at least 8 characters long"
+           required />
+         </div>
+         <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Sign up!</button>
+         </div>
+        </form>
        </div>
       </div>
      </div>
