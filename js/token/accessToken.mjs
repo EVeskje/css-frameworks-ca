@@ -1,8 +1,8 @@
 // Getting accessToken from localStorage
-export const token = localStorage.getItem("accessToken");
+const token = localStorage.getItem("accessToken");
 
 // Creating an object to include the accessToken in the request headers
-export const getData = {
+const getData = {
  method: "GET",
  headers: {
   "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export const getData = {
  *   throw new Error(message, error);
  * }
  */
-export const fetchWithToken = async (url, options = getData) => {
+const fetchWithToken = async (url, options = getData) => {
  try {
   // Fetch a response with the specified URL and the accessToken
   const response = await fetch(url, options);
@@ -39,3 +39,5 @@ export const fetchWithToken = async (url, options = getData) => {
   throw new Error("An error occurred during the fetch operation", error);
  }
 };
+
+export { token, getData, fetchWithToken };
