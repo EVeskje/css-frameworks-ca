@@ -4,7 +4,7 @@ DogGram - Instagram for dogs
 
 ![image](/images/Github-DogGram.png)
 
-[See live site](https://dog-gram.netlify.app/)
+[See live site](https://doggramjs2.netlify.app/)
 
 ## Description
 
