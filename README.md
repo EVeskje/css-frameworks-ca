@@ -6,6 +6,9 @@ DogGram - Instagram for dogs
 
 [See live site](https://doggramjs2.netlify.app/)
 
+## Trello
+[Trello board](https://trello.com/b/Lv8yQmdt/javascript-2)
+
 ## Description
 
 ## Assignment Brief
