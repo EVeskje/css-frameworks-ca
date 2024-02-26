@@ -67,7 +67,8 @@
            id="inputEmailLogin"
            required
            pattern="[\w\-.]+@(stud.)?noroff.no$"
-           title="Only @(stud.)noroff.no domains are allowed to log in" />
+           title="Only @(stud.)noroff.no domains are allowed to log in"
+           autocomplete="username" />
          </div>
          <div class="mb-3">
           <label for="inputPasswordLogin" class="form-label">Password</label>
@@ -77,7 +78,8 @@
            id="inputPasswordLogin"
            minlength="8"
            required
-           title="Password must be at least 8 characters long" />
+           title="Password must be at least 8 characters long"
+           autocomplete="current-password" />
          </div>
          <div class="mb-3">
           <button type="submit" class="btn btn-primary">Log in</button>
@@ -95,7 +97,8 @@
            class="form-control"
            id="inputNewUsername"
            minlength="3"
-           required />
+           required
+           autocomplete="username" />
          </div>
          <div class="mb-3">
           <label for="inputNewEmail" class="form-label">Email</label>
@@ -105,7 +108,8 @@
            id="inputNewEmail"
            required
            pattern="[\w\-.]+@(stud.)?noroff.no$"
-           title="Only @(stud.)noroff.no domains are allowed to register" />
+           title="Only @(stud.)noroff.no domains are allowed to register"
+           autocomplete="username" />
          </div>
          <div class="mb-3">
           <label for="inputNewPassword" class="form-label">Password</label>
@@ -115,7 +119,8 @@
            id="inputNewPassword"
            minlength="8"
            title="Password must be at least 8 characters long"
-           required />
+           required
+           autocomplete="current-password" />
          </div>
          <div class="mb-3">
           <button type="submit" class="btn btn-primary">Sign up!</button>

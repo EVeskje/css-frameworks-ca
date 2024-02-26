@@ -1,10 +1,11 @@
+// Importing necessary modules and utilities
 import { apiBaseUrl, allPostsApi } from "../api_constants.mjs";
 import { fetchWithToken } from "../token/accessToken.mjs";
 import { createMessage } from "../errorMessage.mjs";
 import { formatDateString } from "./formatDate.mjs";
 
 /**
- * Fetches all posts with an access token
+ * Fetches all posts with an access token asynchronously.
  * @returns {Promise} A promise representing the asynchronous operation of fetching posts.
  */
 const fetchAllPosts = async () => {
@@ -12,61 +13,70 @@ const fetchAllPosts = async () => {
 };
 
 /**
- * Creates an HTML card element.
+ * Creates an HTML card element for a post.
  *
  * @param {Object} postData The data for the post.
  * @returns {HTMLElement} The generated HTML card element.
  */
 const createCardAllPosts = (postData) => {
+ // Create layout for the card column
  const cardColLayout = document.createElement("div");
  cardColLayout.className = "col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3";
 
+ // Create anchor element for the card content
  const cardPostContent = document.createElement("a");
  cardPostContent.href = `/post/index.html?id=${postData.id}`;
  cardPostContent.className = "card h-100 my-3";
  cardColLayout.appendChild(cardPostContent);
 
+ // Create image element for the post
  const cardPostImage = document.createElement("img");
- // Set the source (src) attribute of the image. Use the postData.media if it's truthy,
- // if not, use the fallback image "../images/img_placeholder.jpg"
+ // Set the source (src) attribute of the image. Use postData.media if available, else use the fallback image
  cardPostImage.src = !!postData.media
   ? postData.media
   : "/images/img_placeholder.jpg";
  cardPostImage.className = "card-img-top feed-card-img";
  cardPostContent.appendChild(cardPostImage);
 
+ // Create container for the text content of the card
  const cardPostTextContent = document.createElement("div");
  cardPostTextContent.className = "card-body py-2 px-3";
  cardPostContent.appendChild(cardPostTextContent);
 
+ // Create title element for the post
  const cardPostTitle = document.createElement("h6");
  cardPostTitle.innerText = postData.title;
  cardPostTitle.className = "card-title my-3";
  cardPostTextContent.appendChild(cardPostTitle);
 
+ // Create layout for the user name display
  const userNameOnCardLayout = document.createElement("div");
  userNameOnCardLayout.className = "d-flex flex-row align-items-center mb-1";
  cardPostTextContent.appendChild(userNameOnCardLayout);
 
+ // Create thumbnail image element for the user profile
  const profileImageThumbnail = document.createElement("img");
- // Set the source (src) attribute of the image. Use the postData.author.avatar if it's truthy,
- // if not, use the fallback image "../images/default_profile.jpg"
+ // Set the source (src) attribute of the image. Use postData.author.avatar if available, else use the default profile image
  profileImageThumbnail.src = !!postData.author.avatar
   ? postData.author.avatar
   : "/images/default_profile.jpg";
  profileImageThumbnail.className = "rounded-circle me-1 profile-img-thumbnail";
  userNameOnCardLayout.appendChild(profileImageThumbnail);
 
+ // Create paragraph element for the user name
  const userName = document.createElement("p");
  userName.innerText = postData.author.name;
  userName.className = "mb-0 d-flex align-items-center";
  userNameOnCardLayout.appendChild(userName);
 
+ // Create wrapper for the published date display
  const cardPostDatePublishedWrapper = document.createElement("div");
  cardPostDatePublishedWrapper.className = "card-footer text-end";
  cardPostContent.appendChild(cardPostDatePublishedWrapper);
 
+ // Create small element for displaying the published date
  const cardPostDatePublished = document.createElement("small");
+ // Format the date string using formatDate utility function
  const formattedDate = formatDateString(postData.created);
  cardPostDatePublished.innerText = formattedDate;
  cardPostDatePublished.className = "text-secondary";
