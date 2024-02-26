@@ -24,15 +24,17 @@ const displayUserName = async () => {
  try {
   // Fetch user profile data
   const { name, avatar } = await fetchUserProfile();
+
   // Display user name
   userNameContainer.innerText = name;
+
   // Set user avatar image source with a fallback if not available
   profilePicContainer.src = avatar || "../images/default_profile.jpg";
  } catch (error) {
-  // Throw an error
-  throw new Error(error);
+  // Throw an error if there's any issue in fetching or displaying the user profile
+  throw new Error(`Error displaying user profile: ${error.message}`);
  }
 };
 
-// Initial call to display the single post card
+// Initial call to display the user's name and avatar
 displayUserName();
