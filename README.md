@@ -1,4 +1,4 @@
-## css-frameworks-ca
+## css-frameworks-ca – Eirik Nordstrand Veskje
 
 DogGram - Instagram for dogs
 
@@ -24,16 +24,17 @@ The profile page should have a profile image, username, list of user posts, foll
 
 There is no requirment for JS functionality beyond Bootstrap UX behaviour. For example, using the provided dropdowns, tabs or carousel is acceptable but there is no further requirement for custom JS.
 
+## 🧰 Tech Stack
 
-## Built With
+- **HTML**
+- **Tailwind CSS**
+- **SASS**
+- **JavaScript**
+- **Vite + PostCSS + Autoprefixer**
 
-- Figma (prototyping)
-- HTML
-- Boostrap5
-- SASS
-- JavaScript
+## 🚀 Getting Started
 
-## Getting Started
+Follow these steps to run the project locally:
 
 ### Installing
 
@@ -43,11 +44,31 @@ There is no requirment for JS functionality beyond Bootstrap UX behaviour. For e
 git clone https://github.com/EVeskje/css-frameworks-ca.git
 ```
 
-## Contributing
+### 2. Install dependencies
 
-If you have any feedback or suggestions to make the project better, please fork the repo and create a pull request!
+```bash
+npm install
+```
 
-## Contact
+### 3. Run Dev Server
 
-Reach me at [linkedIn](https://www.linkedin.com/in/env-link/) or send an email to eirik.nv@hotmail.com
+```bash
+npm run dev
+```
 
+### 4. Build
+
+```bash
+npm run build
+```
+
+## 🤝 Contributing
+
+Have ideas or suggestions? Feel free to open an issue or a pull request.
+
+---
+
+## 📬 Contact
+
+Made by Eirik Nordstrand Veskje.
+For inquiries, reach out via eirik.nv@hotmail.com or LinkedIn [@eirikveskje](https://www.linkedin.com/in/env-link/)

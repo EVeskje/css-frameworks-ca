@@ -1,274 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="UTF-8" />
-  <meta
-   name="viewport"
-   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>DogGram - Feed</title>
-  <!-- Bootstrap CSS -->
-  <link
-   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   rel="stylesheet" />
-  <!-- Styles -->
-  <link rel="stylesheet" href="/dist/css/styles.css" />
-
-  <!-- Hotjar Tracking Code for DogGram -->
-  <script src="/js/hotjar.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feed • DogGram</title>
+  <script type="module" src="/src/main.js"></script>
  </head>
- <body>
-  <nav class="navbar navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html">DogGram</a>
+ <body class="min-h-screen bg-gray-50 text-gray-900">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+   <div
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+    <a
+     href="/"
+     class="font-semibold tracking-tight text-lg md:text-xl text-gray-900"
+     >🐾 DogGram</a
+    >
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+     <a href="/feed/" class="hover:text-gray-900">Feed</a>
+     <a href="/profile/" class="hover:text-gray-900">Profile</a>
+    </nav>
+
+    <!-- Mobile button -->
     <button
-     class="navbar-toggler"
      type="button"
-     data-toggle="collapse"
-     data-target="#navbarNav"
-     aria-controls="navbarNav"
+     class="md:hidden inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+     aria-controls="mobile-nav"
      aria-expanded="false"
-     aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
+     data-menu-toggle>
+     ☰
+     <span class="sr-only">Toggle menu</span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav fw-bold">
-      <li class="nav-item">
-       <a class="nav-link ms-3" aria-current="page" href="/index.html">Home</a>
+   </div>
+
+   <!-- Mobile nav panel -->
+   <nav
+    id="mobile-nav"
+    data-menu-panel
+    class="md:hidden hidden border-t bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+     <ul class="flex flex-col gap-1.5 text-sm text-gray-700">
+      <li>
+       <a href="/feed/" class="block rounded-lg px-3 py-2 hover:bg-gray-50"
+        >Feed</a
+       >
       </li>
-      <li class="nav-item">
-       <a class="nav-link ms-3" href="/profile">Profile</a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link ms-3 active" href="/feed">Feed</a>
+      <li>
+       <a href="/profile/" class="block rounded-lg px-3 py-2 hover:bg-gray-50"
+        >Profile</a
+       >
       </li>
      </ul>
     </div>
-   </div>
-  </nav>
+   </nav>
+  </header>
 
-  <!-- Search Bar and Sort Options - Mobile View -->
-  <div class="container mt-4 d-md-none">
-   <div class="row mb-3">
-    <div class="col-md-6">
-     <form class="form-inline">
-      <input
-       class="form-control mr-sm-2"
-       type="search"
-       placeholder="Search"
-       aria-label="Search" />
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-       Search
-      </button>
-     </form>
-    </div>
-    <div class="col-md-6">
-     <div class="dropdown">
-      <button
-       class="btn btn-secondary dropdown-toggle"
-       type="button"
-       id="sortDropdown"
-       data-toggle="dropdown"
-       aria-haspopup="true"
-       aria-expanded="false">
-       Sort By
-      </button>
-      <div class="dropdown-menu" aria-labelledby="sortDropdown">
-       <a class="dropdown-item" href="#">Latest</a>
-       <a class="dropdown-item" href="#">Popular</a>
-       <a class="dropdown-item" href="#">Trending</a>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
+  <!-- MAIN CONTENT -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+   <div class="flex flex-col-reverse gap-6 lg:flex-row lg:items-start">
+    <!-- POSTS SECTION -->
+    <section class="w-full lg:flex-1">
+     <!-- Toolbar -->
+     <div
+      class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+      <form role="search" class="flex w-full sm:max-w-md items-center gap-2">
+       <input
+        type="search"
+        placeholder="Search posts"
+        aria-label="Search"
+        class="block w-full rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+       <button
+        type="submit"
+        class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900 hover:bg-gray-50">
+        Search
+       </button>
+      </form>
 
-  <!-- Create New Post Section - Mobile View -->
-  <div class="container mt-4 d-md-none">
-   <div class="row mb-3">
-    <div class="col-md-12">
-     <button
-      type="button"
-      class="btn create-post-mobile-btn"
-      data-toggle="modal"
-      data-target="#createPostModal">
-      Create New Post
-     </button>
-    </div>
-   </div>
-  </div>
+      <div class="flex items-center gap-2">
+       <label for="sortSelect" class="text-sm text-gray-600">Sort</label>
+       <select
+        id="sortSelect"
+        class="block w-44 rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option>Newest</option>
+        <option>Oldest</option>
+        <option>Most liked</option>
+       </select>
 
-  <div class="container mt-4">
-   <div class="row">
-    <div class="col-md-8">
-     <!-- Post Thumbnails -->
-     <div class="card mb-3 shadow-sm p-3 mb-5 bg-white rounded border-0">
-      <img
-       src="/images/dog-feed4.jpg"
-       class="card-img-top"
-       alt="Post Thumbnail" />
-      <div class="card-body">
-       <h5 class="card-title">Lazy Sunday Afternoon</h5>
-       <p class="card-text">
-        Taking a nap in my favorite spot. Sundays are for relaxation and cozy
-        moments. 😴 #LazySunday
-       </p>
+       <!-- Create Post Modal trigger -->
+       <button
+        type="button"
+        data-modal-open="create-post"
+        class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700">
+        + Create post
+       </button>
       </div>
      </div>
 
-     <div class="card mb-3 shadow-sm p-3 mb-5 bg-white rounded border-0">
-      <img
-       src="/images/dog-feed2.jpg"
-       class="card-img-top"
-       alt="Post Thumbnail" />
-      <div class="card-body">
-       <h5 class="card-title">Exploring the Dog Park</h5>
-       <p class="card-text">
-        Enjoying a sunny day at the dog park with furry friends. 🐾
-        #DogParkAdventures
-       </p>
-      </div>
-     </div>
-
-     <div class="card mb-3 shadow-sm p-3 mb-5 bg-white rounded border-0">
-      <img
-       src="/images/dog-feed.jpg"
-       class="card-img-top"
-       alt="Post Thumbnail" />
-      <div class="card-body">
-       <h5 class="card-title">Puppy Playdate Fun</h5>
-       <p class="card-text">
-        Had a blast playing with my puppy today. Can't wait for the next
-        playdate! 🎾 #PuppyPlaytime.
-       </p>
-      </div>
-     </div>
-    </div>
-
-    <div class="col-md-4 d-none d-md-block">
-     <!-- Search Bar -->
-     <form class="form-inline mb-3">
-      <input
-       class="form-control mr-sm-2"
-       type="search"
-       placeholder="Search"
-       aria-label="Search" />
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-       Search
-      </button>
-     </form>
-
-     <!-- Sort Options -->
-     <div class="dropdown mb-3">
-      <button
-       class="btn btn-secondary dropdown-toggle"
-       type="button"
-       id="sortDropdown"
-       data-toggle="dropdown"
-       aria-haspopup="true"
-       aria-expanded="false">
-       Sort By
-      </button>
-      <div class="dropdown-menu" aria-labelledby="sortDropdown">
-       <a class="dropdown-item" href="#">Latest</a>
-       <a class="dropdown-item" href="#">Popular</a>
-       <a class="dropdown-item" href="#">Trending</a>
-      </div>
-     </div>
-
-     <!-- New Post Form - Desktop View -->
-     <div class="row mb-3">
-      <div class="col-md-12">
-       <div class="card border-0">
-        <div class="card-body">
-         <h4 class="card-title mb-4">Create New Post</h4>
-         <form>
-          <div class="mb-3">
-           <label for="postImage" class="form-label">Upload Image</label>
-           <input
-            type="file"
-            class="form-control"
-            id="postImage"
-            accept="image/*" />
-          </div>
-          <div class="mb-3">
-           <label for="postCaption" class="form-label">Caption</label>
-           <textarea class="form-control" id="postCaption" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Post</button>
-         </form>
+     <!-- Posts Grid -->
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Card 1 -->
+      <article
+       class="overflow-hidden rounded-xl bg-white ring-1 ring-gray-200 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
+       <div class="relative [aspect-ratio:4/3]">
+        <img
+         src="/public/images/dog-feed.jpg"
+         alt="Dog photo"
+         class="absolute inset-0 h-full w-full object-cover" />
+       </div>
+       <div class="p-4">
+        <h3 class="text-sm font-semibold">Morning zoomies in the park</h3>
+        <p class="mt-0.5 text-xs text-gray-500">by @buddy • 2h ago</p>
+        <p class="mt-2 text-sm text-gray-700">
+         Chased my tail, met 3 new friends, 10/10 would zoom again.
+        </p>
+        <div class="mt-3 flex gap-2">
+         <button
+          class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+          🐾 Like
+         </button>
+         <button
+          class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+          💬 Comment
+         </button>
         </div>
        </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
+      </article>
 
-  <!-- Modal for Create New Post -->
-  <div
-   class="modal fade"
-   id="createPostModal"
-   tabindex="-1"
-   role="dialog"
-   aria-labelledby="createPostModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h5 class="modal-title" id="createPostModalLabel">Create New Post</h5>
-      <button
-       type="button"
-       class="close"
-       data-dismiss="modal"
-       aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-      </button>
-     </div>
-     <div class="modal-body">
-      <!-- New Post Form -->
-      <div class="row mb-3">
-       <div class="col-md-12">
-        <div class="card border-0">
-         <div class="card-body">
-          <h4 class="card-title mb-4">Create New Post</h4>
-          <form>
-           <div class="mb-3">
-            <label for="postImage" class="form-label">Upload Image</label>
-            <input
-             type="file"
-             class="form-control"
-             id="postImage"
-             accept="image/*" />
-           </div>
-           <div class="mb-3">
-            <label for="postCaption" class="form-label">Caption</label>
-            <textarea class="form-control" id="postCaption" rows="3"></textarea>
-           </div>
-           <button type="submit" class="btn btn-primary">Post</button>
-          </form>
-         </div>
+      <!-- Card 2 -->
+      <article
+       class="overflow-hidden rounded-xl bg-white ring-1 ring-gray-200 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
+       <div class="relative [aspect-ratio:4/3]">
+        <img
+         src="/public/images/dog-feed3.jpg"
+         alt="Dog photo"
+         class="absolute inset-0 h-full w-full object-cover" />
+       </div>
+       <div class="p-4">
+        <h3 class="text-sm font-semibold">Treats? I heard treats.</h3>
+        <p class="mt-0.5 text-xs text-gray-500">by @luna • 4h ago</p>
+        <p class="mt-2 text-sm text-gray-700">
+         Sat. Paw. Good dog. Negotiations successful.
+        </p>
+        <div class="mt-3 flex gap-2">
+         <button
+          class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+          🐾 Like
+         </button>
+         <button
+          class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+          💬 Comment
+         </button>
         </div>
        </div>
-      </div>
+      </article>
      </div>
+    </section>
+   </div>
+  </main>
+
+  <!-- CREATE POST MODAL -->
+  <section
+   data-modal="create-post"
+   class="hidden fixed inset-0 z-50"
+   aria-labelledby="create-post-title"
+   aria-modal="true">
+   <!-- overlay -->
+   <div data-modal-overlay class="absolute inset-0 bg-black/40"></div>
+
+   <!-- dialog -->
+   <div class="relative mx-auto my-10 w-full max-w-lg px-4 sm:px-0">
+    <div
+     role="dialog"
+     tabindex="-1"
+     aria-labelledby="create-post-title"
+     aria-describedby="create-post-desc"
+     class="rounded-xl bg-white ring-1 ring-gray-200 shadow-xl">
+     <div class="flex items-center justify-between border-b px-5 py-4">
+      <h2 id="create-post-title" class="text-base font-semibold">
+       Post a new bark 🐾
+      </h2>
+      <button
+       type="button"
+       data-modal-close
+       aria-label="Close"
+       class="inline-flex items-center justify-center rounded-md px-2 py-1 text-sm text-gray-600 hover:bg-gray-100">
+       ✕
+      </button>
+     </div>
+
+     <form class="p-5 grid gap-4">
+      <p id="create-post-desc" class="sr-only">
+       Create a new DogGram post with title, optional image, and content.
+      </p>
+
+      <div>
+       <label for="mPostTitle" class="block text-sm font-medium text-gray-700"
+        >Title</label
+       >
+       <input
+        id="mPostTitle"
+        type="text"
+        required
+        placeholder="What’s on your mind?"
+        class="mt-1 block w-full rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+       <label for="mPostImage" class="block text-sm font-medium text-gray-700"
+        >Image</label
+       >
+       <input
+        id="mPostImage"
+        type="file"
+        accept="image/*"
+        class="mt-1 block w-full rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900" />
+      </div>
+
+      <div>
+       <label for="mPostBody" class="block text-sm font-medium text-gray-700"
+        >Content</label
+       >
+       <textarea
+        id="mPostBody"
+        rows="3"
+        placeholder="Write something…"
+        class="mt-1 block w-full rounded-lg ring-1 ring-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-2">
+       <button
+        type="button"
+        data-modal-close
+        class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-4 py-2 text-sm text-gray-900 hover:bg-gray-50">
+        Cancel
+       </button>
+       <button
+        type="submit"
+        class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+        Post
+       </button>
+      </div>
+     </form>
     </div>
    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer mt-5 py-3">
-   <div class="container text-center">
-    <p class="mb-0">
-     &copy; 2023 DogGram. All rights reserved<i class="dog-paw-icon"
-      >&#x1F43E;</i
-     >
-    </p>
-   </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </section>
  </body>
 </html>

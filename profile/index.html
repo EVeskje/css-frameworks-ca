@@ -1,146 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="UTF-8" />
-  <meta
-   name="viewport"
-   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>DogGram - Profile</title>
-  <!-- Bootstrap CSS -->
-  <link
-   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   rel="stylesheet" />
-  <!-- Styles -->
-  <link rel="stylesheet" href="/dist/css/styles.css" />
-
-  <!-- Hotjar Tracking Code for DogGram -->
-  <script src="/js/hotjar.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile • DogGram</title>
+  <script type="module" src="/src/main.js"></script>
  </head>
- <body>
-  <nav class="navbar navbar-expand-md shadow-sm p-3 mb-5 bg-white rounded">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html">DogGram</a>
+ <body class="min-h-screen bg-gray-50 text-gray-900">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+   <div
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+    <a
+     href="/"
+     class="font-semibold tracking-tight text-lg md:text-xl text-gray-900"
+     >🐾 DogGram</a
+    >
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+     <a href="/feed/" class="hover:text-gray-900">Feed</a>
+     <a href="/profile/" class="hover:text-gray-900">Profile</a>
+    </nav>
+
+    <!-- Mobile button -->
     <button
-     class="navbar-toggler"
      type="button"
-     data-toggle="collapse"
-     data-target="#navbarNav"
-     aria-controls="navbarNav"
+     class="md:hidden inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+     aria-controls="mobile-nav"
      aria-expanded="false"
-     aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
+     data-menu-toggle>
+     ☰
+     <span class="sr-only">Toggle menu</span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav fw-bold">
-      <li class="nav-item">
-       <a class="nav-link ms-3" aria-current="page" href="/index.html">Home</a>
+   </div>
+
+   <!-- Mobile nav panel -->
+   <nav
+    id="mobile-nav"
+    data-menu-panel
+    class="md:hidden hidden border-t bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+     <ul class="flex flex-col gap-1.5 text-sm text-gray-700">
+      <li>
+       <a href="/feed/" class="block rounded-lg px-3 py-2 hover:bg-gray-50"
+        >Feed</a
+       >
       </li>
-      <li class="nav-item">
-       <a class="nav-link ms-3 active" href="/profile">Profile</a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link ms-3" href="/feed">Feed</a>
+      <li>
+       <a href="/profile/" class="block rounded-lg px-3 py-2 hover:bg-gray-50"
+        >Profile</a
+       >
       </li>
      </ul>
     </div>
-   </div>
-  </nav>
+   </nav>
+  </header>
 
-  <!-- Profile Header -->
-  <div class="container mt-4">
-   <div class="row">
-    <div class="col-md-3">
-     <!-- Profile Image -->
+  <!-- PROFILE CONTENT -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+   <!-- Profile header card -->
+   <section
+    class="rounded-2xl bg-white ring-1 ring-gray-200 p-5 sm:p-6 shadow-sm mb-6">
+    <div class="grid gap-4 sm:grid-cols-[96px_1fr_auto] items-start">
      <img
-      src="/images/dog-profile.jpg"
-      class="img-fluid rounded-circle"
-      alt="Profile Image" />
-    </div>
-    <div class="col-md-9">
-     <!-- User Details -->
-     <h2 class="mb-2">PugNPlay</h2>
-     <!-- Welcome Message -->
-     <p>
-      Welcome to my DogGram profile! 🐾 I'm a happy and playful Pug living my
-      best dog life in Dogtown. Follow me for daily adventures, fun photos, and
-      a wagging good time!
-     </p>
-     <p><strong>Age:</strong> 3 years</p>
-     <p><strong>Location:</strong> Dogtown</p>
-     <p><strong>Followers:</strong> 780</p>
-     <p><strong>Following:</strong> 240</p>
-     <!-- Follow Button -->
-     <button type="button" class="btn btn-primary mt-2">Follow</button>
-    </div>
-   </div>
-  </div>
-
-  <!-- User Posts -->
-  <div class="container mt-4">
-   <!-- Section Heading -->
-   <h2 class="mb-3">User Posts</h2>
-   <div class="row">
-    <!-- Post 1 -->
-    <div class="col-md-4 mb-4">
-     <a href="/feed/index.html" class="text-decoration-none">
-      <div class="card h-100">
-       <img
-        src="/images/dog-feed2.jpg"
-        class="card-img-top img-fluid"
-        alt="Post 1" />
-       <div class="card-body">
-        <h5 class="card-title m-0">Exploring the Dog Park</h5>
+      src="/public/images/dog-profile.jpg"
+      alt="Dog avatar"
+      class="h-24 w-24 rounded-full object-cover" />
+     <div>
+      <div
+       class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+       <h1 class="text-xl sm:text-2xl font-semibold">@buddy</h1>
+       <div class="flex gap-2">
+        <button
+         class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+         Follow
+        </button>
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-4 py-2 text-sm text-gray-900 hover:bg-gray-50">
+         Message
+        </button>
        </div>
       </div>
-     </a>
-    </div>
+      <p class="mt-1 text-sm text-gray-500">Pug • Sofa</p>
 
-    <!-- Post 2 -->
-    <div class="col-md-4 mb-4">
-     <a href="/feed/index.html" class="text-decoration-none">
-      <div class="card h-100">
+      <div class="mt-3 flex flex-wrap items-center gap-4 text-sm font-semibold">
+       <span
+        >Followers <span class="font-normal text-gray-500">1,247</span></span
+       >
+       <span>Following <span class="font-normal text-gray-500">412</span></span>
+       <span>Posts <span class="font-normal text-gray-500">86</span></span>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Posts -->
+   <section>
+    <h2 class="text-lg font-semibold mb-3">Posts</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+     <!-- Post 1 -->
+     <article
+      class="overflow-hidden rounded-xl bg-white ring-1 ring-gray-200 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
+      <div class="relative [aspect-ratio:4/3]">
        <img
-        src="/images/dog-feed4.jpg"
-        class="card-img-top img-fluid"
-        alt="Post 2" />
-       <div class="card-body">
-        <h5 class="card-title m-0">Lazy Sunday Afternoon</h5>
+        src="/public/images/dog-feed.jpg"
+        alt="Dog enjoying a hike"
+        class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+      <div class="p-4">
+       <h3 class="text-sm font-semibold">Hiking with my friends</h3>
+       <p class="mt-0.5 text-xs text-gray-500">2 days ago</p>
+       <div class="mt-3 flex gap-2">
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         🐾 Like
+        </button>
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         💬 Comment
+        </button>
        </div>
       </div>
-     </a>
-    </div>
+     </article>
 
-    <!-- Post 3 -->
-    <div class="col-md-4 mb-4">
-     <a href="/feed/index.html" class="text-decoration-none">
-      <div class="card h-100">
+     <!-- Post 2 -->
+     <article
+      class="overflow-hidden rounded-xl bg-white ring-1 ring-gray-200 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
+      <div class="relative [aspect-ratio:4/3]">
        <img
-        src="/images/dog-feed.jpg"
-        class="card-img-top img-fluid"
-        alt="Post 3" />
-       <div class="card-body">
-        <h5 class="card-title m-0">Puppy Playdate Fun</h5>
+        src="/public/images/dog-feed2.jpg"
+        alt="Dog with toy"
+        class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+      <div class="p-4">
+       <h3 class="text-sm font-semibold">New squeaky toy acquired</h3>
+       <p class="mt-0.5 text-xs text-gray-500">5 days ago</p>
+       <div class="mt-3 flex gap-2">
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         🐾 Like
+        </button>
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         💬 Comment
+        </button>
        </div>
       </div>
-     </a>
+     </article>
+
+     <!-- Post 3 -->
+     <article
+      class="overflow-hidden rounded-xl bg-white ring-1 ring-gray-200 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md">
+      <div class="relative [aspect-ratio:4/3]">
+       <img
+        src="/public/images/dog-feed3.jpg"
+        alt="Dog napping"
+        class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+      <div class="p-4">
+       <h3 class="text-sm font-semibold">Nap time after big walk</h3>
+       <p class="mt-0.5 text-xs text-gray-500">1 week ago</p>
+       <div class="mt-3 flex gap-2">
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         🐾 Like
+        </button>
+        <button
+         class="inline-flex items-center justify-center rounded-lg ring-1 ring-gray-200 bg-white px-3 py-1 text-sm text-gray-900 hover:bg-gray-50">
+         💬 Comment
+        </button>
+       </div>
+      </div>
+     </article>
     </div>
-   </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer mt-5 py-3">
-   <div class="container text-center">
-    <p class="mb-0">
-     &copy; 2023 DogGram. All rights reserved<i class="dog-paw-icon"
-      >&#x1F43E;</i
-     >
-    </p>
-   </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </section>
+  </main>
  </body>
 </html>
