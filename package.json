@@ -1,34 +1,18 @@
 {
   "name": "css-frameworks-ca",
-  "version": "0.0.1",
-  "description": "An example bootstrap app",
-  "main": "index.js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5174"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EVeskje/css-frameworks-ca.git"
-  },
-  "keywords": [
-    "Bootstrap",
-    "SASS",
-    "SCSS"
-  ],
-  "author": "Eirik Nordstrand Veskje <Eirik.nv@hotmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EVeskje/css-frameworks-ca/issues"
-  },
-  "homepage": "https://github.com/EVeskje/css-frameworks-ca#readme",
   "devDependencies": {
-    "sass": "^1.69.5"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.2",
-    "bootstrap-icons": "^1.11.1",
-    "watch": "^0.13.0"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "sass": "^1.77.0",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.0"
   }
 }
